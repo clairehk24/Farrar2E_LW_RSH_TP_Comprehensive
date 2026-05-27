@@ -1,0 +1,15 @@
+# Microsoft Office documents and temporary lock files
+*.doc
+*.docx
+*.docm
+*.dot
+*.dotx
+*.ppt
+*.pptx
+*.pptm
+*.pot
+*.potx
+*.pps
+*.ppsx
+~$*
+docs/PPs/Farrar2E_RSH_Comprehensive_PowerPoints.zip

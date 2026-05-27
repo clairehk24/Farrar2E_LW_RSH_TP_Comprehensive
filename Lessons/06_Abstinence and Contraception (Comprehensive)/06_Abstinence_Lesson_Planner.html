@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abstinence Lesson Planner</title>
+    <style>
+      :root {
+        --brand-pink: #a71b4c;
+        --brand-blue: #0096c7;
+        --page-bg: #eef2f5;
+        --surface: #ffffff;
+        --surface-soft: #f8fafc;
+        --text: rgba(0, 0, 0, 0.84);
+        --muted: rgba(0, 0, 0, 0.64);
+        --border: #e6ecf1;
+        --shadow: 0 8px 24px rgba(29, 48, 67, 0.08);
+        --font-body: "Franklin Gothic Book", Helvetica, sans-serif;
+        --font-ui: "Helvetica LT Std", Helvetica, sans-serif;
+        --font-nav: "Franklin Gothic Book", Helvetica, sans-serif;
+        --font-tip: "Franklin Gothic Book", sans-serif;
+        --font-head: "Century Gothic Std", "Century Gothic", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page-bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        line-height: 1.7;
+      }
+
+      .top-accent {
+        height: 8px;
+        background: var(--brand-pink);
+      }
+
+      .page {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 16px 16px 28px;
+      }
+
+      .content {
+        width: 100%;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 0;
+        box-shadow: var(--shadow);
+        overflow: visible;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0 0 12px;
+        line-height: 1.2;
+      }
+
+      h1 {
+        font-family: var(--font-head);
+        font-size: 2rem;
+        color: #1a4a63;
+        font-weight: 700;
+      }
+
+      h3 {
+        font-family: var(--font-head);
+        font-size: 1.15rem;
+        color: #234f66;
+        margin-top: 0.5rem;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-family: var(--font-ui);
+        font-size: 1.02rem;
+        color: #2d3e4a;
+        font-weight: 700;
+        margin-top: 1.4rem;
+      }
+
+      p {
+        margin: 0 0 1rem;
+      }
+
+      ul,
+      ol {
+        margin: 0 0 1rem 1.5rem;
+        padding: 0;
+      }
+
+      li {
+        margin: 0.35rem 0;
+      }
+
+      a {
+        color: #0a6e95;
+      }
+
+      a:hover {
+        color: #084f6b;
+      }
+
+      .body {
+        padding: 28px 34px 40px;
+      }
+
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 12px;
+        line-height: 1.25;
+        margin: 0;
+        padding: 16px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px rgba(29, 48, 67, 0.06);
+        color: var(--muted);
+      }
+
+      .legend p {
+        margin: 0;
+      }
+
+      .lesson-block {
+        padding: 20px;
+        margin: 0.75rem 0;
+      }
+
+      .lesson-card {
+        border: 1px solid var(--border);
+        margin-bottom: 0.25rem;
+        background: var(--surface);
+        box-shadow: 0 4px 14px rgba(29, 48, 67, 0.06);
+      }
+
+      .lesson-header {
+        background: #eef1f4;
+        padding: 12px 20px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .lesson-eyebrow {
+        margin: 0;
+        font-family: var(--font-ui);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #2d3e4a;
+      }
+
+      .lesson-eyebrow h3 {
+        margin: 0;
+        letter-spacing: normal;
+      }
+
+      .lesson-body {
+        background: #f9fbfd;
+        padding: 20px 24px 26px;
+      }
+
+      .lesson-plan-links {
+        margin-bottom: 1.5rem;
+      }
+
+      .lesson-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2.5rem;
+      }
+
+      .lesson-grid h4 {
+        margin-top: 0;
+      }
+
+      .lesson-grid ul {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      .resource-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .resource-buttons.one-column {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+      }
+
+      .resource-btn {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid #cfe4ec;
+        background: #f7fbfd;
+        color: #1a4a63;
+        font-family: var(--font-ui);
+        font-size: 0.85rem;
+        font-weight: 700;
+        line-height: 1.25;
+        text-align: left;
+        text-decoration: none;
+        transition: all 0.15s ease;
+      }
+
+      .resource-btn:hover,
+      .resource-btn:focus-visible {
+        background: var(--brand-blue);
+        border-color: var(--brand-blue);
+        color: #fff;
+        transform: translateY(-1px);
+      }
+
+      button.resource-btn {
+        appearance: none;
+        cursor: pointer;
+      }
+
+      .tooltip {
+        position: relative;
+      }
+
+      .tooltiptext {
+        visibility: hidden;
+        width: 220px;
+        background-color: black;
+        color: #ffffff;
+        text-align: center;
+        padding: 6px 8px;
+        border-radius: 6px;
+        position: absolute;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.15s ease;
+      }
+
+      .tooltip:hover .tooltiptext,
+      .tooltip:focus .tooltiptext,
+      .tooltip.is-open .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      @media (max-width: 900px) {
+        .lesson-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .page {
+          padding: 10px 10px 20px;
+        }
+
+        .body {
+          padding: 22px 18px 26px;
+        }
+
+        .lesson-block {
+          padding: 0;
+        }
+
+        .lesson-body {
+          padding: 18px;
+        }
+
+        h1 {
+          font-size: 1.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <main class="content" role="main">
+        <div class="top-accent"></div>
+        <section class="legend">
+          <p>
+            <strong>AK:</strong>
+            Answer Key;
+            <strong>AS:</strong>
+            All students;
+            <strong>ELL:</strong>
+            English language learner;
+            <strong>LP:</strong>
+            Less proficient;
+            <strong>LQ:</strong>
+            Lesson quiz;
+            <strong>MP:</strong>
+            More proficient;
+            <strong>NTG:</strong>
+            Note-taking guide;
+            <strong>PPT:</strong>
+            PowerPoint presentation;
+            <strong>SBW:</strong>
+            Skill-building challenge worksheet;
+            <strong>VRW:</strong>
+            Vocabulary review worksheet
+          </p>
+        </section>
+        <section class="body">
+          <section class="lesson-block">
+            <div class="lesson-card">
+              <div class="lesson-header">
+                <div class="lesson-eyebrow">
+                  <h3>Abstinence</h3>
+                </div>
+              </div>
+
+              <div class="lesson-body">
+                <div class="lesson-plan-links">
+                  <h4>Lesson Plan</h4>
+                  <div class="resource-buttons">
+                    <a class="resource-btn" href="https://bcove.video/3p3Yoe1" target="_blank">Abstinence Introductory video</a>
+                  </div>
+                </div>
+
+                <div class="lesson-grid">
+                  <div>
+                    <h4>Learning Targets</h4>
+                    <ul>
+                      <li>Explain three benefits of abstinence.</li>
+                      <li>Analyze your physical intimacy boundaries and what you will and will not do in a relationship.</li>
+                      <li>Specify at least three challenges of being a teen parent.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4>Student and Instructor Resources</h4>
+                    <div class="resource-buttons one-column">
+                      <a class="resource-btn" href="Farrar2E_Abstinence_Answer Key.docx" target="_blank">
+                        <strong>AK</strong>
+                        &bull; Abstinence
+                      </a>
+                      <a class="resource-btn" href="../../lessonquizzes.html" target="_blank">
+                        <strong>LQ</strong>
+                        &bull; Abstinence
+                      </a>
+                      <a class="resource-btn" href="Farrar2E_Abstinence_NTG.docx" target="_blank">
+                        <strong>NTG</strong>
+                        &bull; Abstinence Note-Taking Guide
+                      </a>
+                      <a class="resource-btn" href="Farrar2E_Abstinence_PowerPoint.pptx" target="_blank">
+                        <strong>PPT</strong>
+                        &bull; Abstinence
+                      </a>
+                      <a class="resource-btn" href="Farrar2E_Abstinence_SBW.docx" target="_blank">
+                        <strong>SBW</strong>
+                        &bull; Decision Making
+                      </a>
+                      <a class="resource-btn" href="Farrar2E_Abstinence_VRW.docx" target="_blank">
+                        <strong>VRW</strong>
+                        &bull; Abstinence
+                      </a>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4>Differentiated Instruction Options</h4>
+                    <div class="resource-buttons">
+                      <a class="resource-btn" href="Farrar2E_Abstinence_SBW.docx" target="_blank">
+                        <strong>AS</strong>
+                        &bull; Skill-Building Challenge Worksheet
+                      </a>
+                      <a class="resource-btn" href="Farrar2E_Abstinence_VRW.docx" target="_blank">
+                        <strong>AS</strong>
+                        &bull; Vocabulary Review Worksheet
+                      </a>
+                      <a class="resource-btn" href="Farrar2E_Abstinence_NTG.docx" target="_blank">
+                        <strong>LP</strong>
+                        &bull; Note-Taking Guide
+                      </a>
+                      <a class="resource-btn" href="Farrar2E_Abstinence_ELL.docx" target="_blank">
+                        <strong>LP ELL</strong>
+                        &bull; Vocabulary Review Worksheet
+                      </a>
+                      <button type="button" class="resource-btn tooltip" aria-expanded="false">
+                        <strong>MP</strong>
+                        &bull; Thinking Critically (Lesson Review)
+                        <span class="tooltiptext">Lesson Reviews can be found at the end of the lesson.</span>
+                      </button>
+                      <button type="button" class="resource-btn tooltip" aria-expanded="false">
+                        <strong>MP</strong>
+                        &bull; Take it Home (Lesson Review)
+                        <span class="tooltiptext">Take It Home can be found at the end of the lesson.</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      (function () {
+        var openTooltip = null;
+        var triggers = document.querySelectorAll(".tooltip");
+
+        function closeTooltip(trigger) {
+          if (!trigger) {
+            return;
+          }
+
+          trigger.classList.remove("is-open");
+          trigger.setAttribute("aria-expanded", "false");
+          if (openTooltip === trigger) {
+            openTooltip = null;
+          }
+        }
+
+        Array.prototype.forEach.call(triggers, function (trigger) {
+          trigger.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (openTooltip && openTooltip !== trigger) {
+              closeTooltip(openTooltip);
+            }
+
+            if (trigger.classList.contains("is-open")) {
+              closeTooltip(trigger);
+            } else {
+              trigger.classList.add("is-open");
+              trigger.setAttribute("aria-expanded", "true");
+              openTooltip = trigger;
+            }
+          });
+        });
+
+        document.addEventListener("click", function () {
+          closeTooltip(openTooltip);
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeTooltip(openTooltip);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
