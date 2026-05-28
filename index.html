@@ -604,7 +604,7 @@
 
             <details class="group" open>
               <summary>
-                <span class="twisty" aria-hidden="true">?</span>
+                <span class="twisty" aria-hidden="true">&#9662;</span>
                 <span class="node-title">Getting Started</span>
               </summary>
 
@@ -621,7 +621,7 @@
 
             <details class="group" open>
               <summary>
-                <span class="twisty" aria-hidden="true">?</span>
+                <span class="twisty" aria-hidden="true">&#9662;</span>
                 <span class="node-title">Lessons</span>
               </summary>
 
@@ -803,7 +803,7 @@
             </details>
             <details class="group" open>
               <summary>
-                <span class="twisty" aria-hidden="true">?</span>
+                <span class="twisty" aria-hidden="true">&#9662;</span>
                 <span class="node-title">Downloads</span>
               </summary>
 
@@ -931,7 +931,7 @@
         function syncTwisty(d) {
           const t = d.querySelector(":scope > summary .twisty");
           if (!t) return;
-          t.textContent = d.open ? "?" : "?";
+          t.innerHTML = d.open ? "&#9662;" : "&#9656;";
         }
 
         allDetails.forEach((d) => {
