@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dating Relationships</title>
+    <title>Teens and Identity Exploration</title>
     <style>
       :root {
         --brand-pink: #a71b4c;
@@ -174,12 +174,14 @@
         }
       }
 
+      /* Tooltip container */
       .tooltip {
         position: relative;
         display: inline-block;
         cursor: pointer;
       }
 
+      /* Tooltip text */
       .tooltiptext {
         visibility: hidden;
         width: 220px;
@@ -189,7 +191,7 @@
         padding: 6px 8px;
         border-radius: 6px;
         position: absolute;
-        bottom: 125%;
+        bottom: 125%; /* show above the link */
         left: 50%;
         transform: translateX(-50%);
         z-index: 1000;
@@ -198,10 +200,12 @@
         transition: opacity 0.15s ease;
       }
 
+      /* Show the tooltip text on hover */
       .tooltip:hover .tooltiptext {
         visibility: visible;
         opacity: 1;
       }
+      /* ===== Lesson Planner ===== */
 
       .chapter-resources {
         background: #fff;
@@ -300,6 +304,7 @@
         color: var(--muted);
       }
 
+      /* ===== Lesson Card Structure ===== */
       .chapter-card {
         border: 1px solid var(--border);
         margin-bottom: 0.25rem;
@@ -314,12 +319,14 @@
         box-shadow: 0 4px 14px rgba(29, 48, 67, 0.06);
       }
 
+      /* Header band */
       .lesson-header {
-        background: #eef1f4;
+        background: #eef1f4; /* medium neutral gray */
         padding: 12px 20px;
         border-bottom: 1px solid var(--border);
       }
 
+      /* Header text */
       .lesson-eyebrow {
         margin: 0;
         font-family: var(--font-ui);
@@ -333,10 +340,13 @@
         letter-spacing: normal;
       }
 
+      /* Content area */
       .lesson-body {
         background: #f9fbfd;
         padding: 20px 24px 26px;
       }
+
+      /*TOC Navigation for Sticky Buttons on Lesson Pages*/
 
       .toc {
         display: flex;
@@ -378,6 +388,8 @@
         transform: translateY(-1px);
       }
 
+      /*content formatting throughout the body*/
+
       .ct-content {
         width: 100%;
         padding: 28px 34px 40px;
@@ -411,116 +423,191 @@
       <main class="content" role="main">
         <div class="top-accent"></div>
         <section class="ct-content">
-          <h3 id="overview"><strong>Overview</strong></h3>
-          <p>This lesson focuses on advocating for safe and respectful dating as well as refusal skills to stay true to the emotional and physical boundaries you have set for yourself. The advantages of abstinence are discussed, as are the consequences of early and unprotected sexual behaviors.</p>
+          <h3 id="overview">Overview</h3>
+          <p>This lesson focuses on learning about the changes that can happen during adolescence, including feelings about gender identity, sexual orientation, and sexual identity.</p>
 
-          <h3 id="learning-targets"><strong>Learning Targets</strong></h3>
+          <h3 id="learning-targets">Learning Targets</h3>
           <ul>
-            <li>Examine the characteristics of a healthy dating relationship.
-            </li>
-            <li>Explain three advantages to choosing abstinence.
-            </li>
-            <li>Practice your refusal skills for a potential physically intimate situation.
-            </li>
-            <li>Summarize the consequences of early and unprotected sexual behaviors.
-            </li>
+            <li>Identify social, emotional, mental, and physical changes in teens.</li>
+            <li>Differentiate between sex assigned at birth, gender identity, and gender expression.</li>
+            <li>Create a plan to support LGBTQIA+ student rights in school.</li>
+            <li>Explain how support from peers, families, and schools can improve a person's experience as it relates to sexual orientation and sexual identity.</li>
           </ul>
 
-          <h3 id="preparation"><strong>Preparation</strong></h3>
-          <p><strong>For the Warm-Up Activity:</strong> Write the journal question on the board or identify (and copy as needed) the worksheets you plan to use.</p>
+          <h3 id="preparation">Preparation</h3>
+          <p>
+            <strong>For the Warm-Up Activity:</strong>
+            Write the journal question on the board or identify (and copy as needed) the worksheets you plan to use.
+          </p>
           <ul>
-            <li><a href="../../lessonquizzes.html" target="_blank">Dating Relationships Quiz</a>
-            </li>
-            <li><a href="Farrar2E_Dating Relationships_VRW.docx" target="_blank">Dating Relationships Vocabulary Review Worksheet</a>
-            </li>
-            <li><a href="Farrar2E_Dating Relationships_ELL.docx" target="_blank">Dating Relationships ELL Vocabulary Review Worksheet</a>
-            </li>
+            <li><a href="../../lessonquizzes.html" target="_blank">Teens and Identity Exploration Quiz</a></li>
+            <li><a href="Farrar2E_Teens and Identity Exploration_VRW.docx" target="_blank">Teens and Identity Exploration Vocabulary Review Worksheet</a></li>
+            <li><a href="Farrar2E_Teens and Identity Exploration_ELL.docx" target="_blank">Teens and Identity Exploration ELL Vocabulary Review Worksheet</a></li>
           </ul>
-          <p><strong>For the Content Focus:</strong> Open the <a href="Farrar2E_Dating Relationships_PowerPoint.pptx" target="_blank">Dating Relationships PowerPoint slides</a> or make copies of the <a href="Farrar2E_Dating Relationships_NTG.docx" target="_blank">Dating Relationships Note-Taking Guide</a>.</p>
-          <p><strong>For the Lesson Focus:</strong> Copy the <a href="Farrar2E_Dating Relationships_SBW.docx" target="_blank">Skill-Building Challenge Worksheet</a>.</p>
 
-          <h3 id="warm-up-activity"><strong>Warm-Up Activity</strong></h3>
+          <p>
+            <strong>For the Content Focus:</strong>
+            Open the
+            <a href="Farrar2E_Teens and Identity Exploration_PowerPoint.pptx" target="_blank">Teens and Identity Exploration PowerPoint slides</a>
+            or make copies of the
+            <a href="Farrar2E_Teens and Identity Exploration_NTG.docx" target="_blank">Teens and Identity Exploration Note-Taking Guide</a>
+            .
+          </p>
+
+          <p>
+            <strong>For the Lesson Focus:</strong>
+            Copy the
+            <a href="Farrar2E_Teens and Identity Exploration_SBW.docx" target="_blank">Skill-Building Challenge Worksheet</a>
+            .
+          </p>
+
+          <h3 id="warm-up-activity">Warm-Up Activity</h3>
           <p>Select a warm-up activity to help get your class focused and on task.</p>
           <ul>
-            <li><strong>Journal Question:</strong> <em>List three qualities the person you date must have and explain why you need them to have those qualities.</em>
+            <li>
+              <strong>Journal Question:</strong>
+              How would you react if your best friend told you they identified as LGBTQIA+? Would it matter to you? Would it change anything between you and your best friend? Why or why not?
               <ul>
-                <li><em>Option:</em> Write or project the question and have students respond in their journals as they enter class.
+                <li>
+                  <em>Option:</em>
+                  Write or project the question and have students respond in their journals as they enter class.
                 </li>
-                <li><em>Option:</em> Have students discuss the question with a partner or in a small group.
+                <li>
+                  <em>Option:</em>
+                  Have students discuss the question with a partner or in a small group.
                 </li>
               </ul>
             </li>
-            <li><strong>Vocabulary Review:</strong> Have students work individually, in pairs, or in small groups to complete the <a href="Farrar2E_Dating Relationships_VRW.docx" target="_blank">Dating Relationships Vocabulary Review Worksheet</a>.
+            <li>
+              <strong>Vocabulary Review:</strong>
+              Have students work individually, in pairs, or in small groups to complete the
+              <a href="Farrar2E_Teens and Identity Exploration_VRW.docx" target="_blank">Teens and Identity Exploration Vocabulary Review Worksheet</a>
+              .
             </li>
-            <li><strong>Quiz:</strong> Have students complete the Dating Relationships Quiz to assess their prior knowledge.
+            <li>
+              <strong>Quiz:</strong>
+              Have students complete the Teens and Identity Exploration Quiz to assess their prior knowledge.
               <ul>
-                <li><em>Option:</em> Collect the quiz and use it alongside a posttest to demonstrate student learning.
+                <li>
+                  <em>Option:</em>
+                  Collect the quiz and use it alongside a posttest to demonstrate student learning.
                 </li>
-                <li><em>Option:</em> Have students share their answers with a partner and then go over the answers together as a class.
+                <li>
+                  <em>Option:</em>
+                  Have students share their answers with a partner and then go over the answers together as a class.
                 </li>
               </ul>
             </li>
           </ul>
 
-          <h3 id="lesson-content"><strong>Lesson Content</strong></h3>
+          <h3 id="lesson-content">Lesson Content</h3>
           <p>Review the content from the textbook lesson.</p>
-          <p><em>Option:</em> Use the <a href="Farrar2E_Dating Relationships_PowerPoint.pptx" target="_blank">Dating Relationships PowerPoint slides</a> to review the lesson content.</p>
-          <p><em>Option:</em> Have students use the <a href="Farrar2E_Dating Relationships_NTG.docx" target="_blank">Dating Relationships Note-Taking Guide</a> to review lesson content. Ask students to work alone, in pairs, or in small groups. Review the questions as a class if time permits.</p>
+          <p>
+            <em>Option:</em>
+            Use the
+            <a href="Farrar2E_Teens and Identity Exploration_PowerPoint.pptx" target="_blank">Teens and Identity Exploration PowerPoint slides</a>
+            to review the lesson content.
+          </p>
+          <p>
+            <em>Option:</em>
+            Have students use the
+            <a href="Farrar2E_Teens and Identity Exploration_NTG.docx" target="_blank">Teens and Identity Exploration Note-Taking Guide</a>
+            to review lesson content. Ask students to work alone, in pairs, or in small groups. Review the questions as a class if time permits.
+          </p>
 
-          <h3 id="lesson-focus"><strong>Lesson Focus: </strong><strong>Interpersonal</strong><strong> </strong><strong>Communication</strong></h3>
+          <h3 id="lesson-focus">Lesson Focus: Analyzing Influences</h3>
           <ol>
-            <li>Provide one copy of the <a href="Farrar2E_Dating Relationships_SBW.docx" target="_blank">Skill-Building Challenge Worksheet</a> for each student.
+            <li>
+              Provide each student a copy of the
+              <a href="Farrar2E_Teens and Identity Exploration_SBW.docx" target="_blank">Skill-Building Challenge Worksheet</a>
+              .
             </li>
-            <li>Have students read the scenario and answer the questions to write a refusal response for the scenario presented.
-            </li>
-            <li>If time allows, have students share their refusal response with a partner.
-            </li>
+            <li>Review the assignment directions with the class and review the analyzing influences skill cues with students.</li>
+            <li><em>Option:</em> Have students work individually to complete the worksheet.</li>
+            <li><em>Option:</em> Assign students to work in pairs to complete the worksheet.</li>
+            <li>When students have completed their scenarios, ask for students to volunteer to share their responses.</li>
+            <li>Review as a class if there were similarities between classmates or things that surprised the students about their responses.</li>
           </ol>
 
-          <h3 id="challenge-activity"><strong>Challenge Activity</strong></h3>
+          <h3 id="challenge-activity">Challenge Activity</h3>
           <p>Have students needing additional challenge work on the following critical thinking task:</p>
-          <blockquote>Why do you think it would be important in a relationship to establish boundaries around physical intimacy?</blockquote>
+          <blockquote>
+            Think about the language you use and the language you hear from your peers and friends about the LGBTQIA+ community. Is it supportive and inclusive or is it judgmental and offensive? Take
+            some time to work on using more inclusive language and to help others around you be more inclusive in the words they choose.
+          </blockquote>
 
-          <h3 id="reflection-and-summary"><strong>Reflection and Summary</strong></h3>
-          <p>Review the critical content from today’s lesson. Review the learning targets and ask students to answer each question posed.</p>
+          <h3 id="reflection-and-summary">Reflection and Summary</h3>
+          <p>Review the critical content from today's lesson. Review the learning targets and ask students to answer each question posed.</p>
           <p>Can you...</p>
           <ul>
-            <li>Examine the characteristics of a healthy dating relationship?
-              <p>A healthy dating relationship should have the following characteristics: honesty, good communication, mutual respect, mutual affection, physical and emotional attraction, respect for individuality, stability, safety, and equality.</p>
+            <li>
+              Identify social, emotional, mental, and physical changes in teens?
+              <p>
+                Social influences relate to the increased influence friends and classmates have on you, emotional influences relate to the moods and emotions that can be very intense during puberty,
+                mental influences relate to teens moving from seeing the world that is only in front of them to seeing the complexity in different situations as well as potential solutions, and
+                physical changes mostly relate to puberty.
+              </p>
             </li>
-            <li>Explain three advantages to choosing abstinence?
-              <p>There are no health risks; pregnancy won’t occur; the parties won’t contract an STI; there is no need to plan for abstinence; abstinence is free and readily available; emotional and social problems are reduced; the parties are able to wait until they are ready for a sexual relationship; they are able to honor their personal, moral, or religious beliefs.</p>
+            <li>
+              Differentiate between sex assigned at birth, gender identity, and gender expression?
+              <p>
+                Sex refers to the biological factors, primarily a person's reproductive system, that make a person male, female, or intersex at birth. Gender identity is how individuals see
+                themselves such as people with testicles, people with ovaries, somewhere in between, or neither. Gender expression is how an individual expresses their gender through the presentation
+                of themself and their behaviors.
+              </p>
             </li>
-            <li>Practice your refusal skills for a potential physically intimate situation?
-              <p>Refusal skills are techniques you use to say no to something you don’t want to do. You should always use a combination of verbal and nonverbal communication to emphasize your point.</p>
+            <li>
+              Create a plan to support LGBTQIA+ student rights in school?
+              <p>
+                Listen to LGBTQIA+ teens and be a good friend. Demonstrate kindness and inclusion. Speak up if you hear anti-LGBTQIA+ comments or witness bullying or harassment. Let LGBTQIA+ teens be
+                authentic around you. Create safe spaces in your school for LGBTQIA+ teens. Be an ally for LGBTQIA+ teens and speak up to support them.
+              </p>
             </li>
-            <li>Summarize the consequences of early and unprotected sexual behaviors?
-              <p><em>Physical risks </em>can include becoming pregnant or contracting a sexually transmitted infection (STI).</p>
-              <p><em>Social risks </em>may involve feelings of not belonging or not being normal if teens are comparing their own sexual activity or lack of sexual activity to what their peers may say they are doing or what they see in social media.</p>
-              <p><em>Mental health risks </em>include possible anxiety about the consequences or about being pressured to be sexually active. Depression may also be a factor if an individual feels guilty about being sexually active.</p>
-              <p><em>Emotional risks and consequences </em>can include not having the emotional maturity to manage a sexual relationship, which can be damaging to teens’ self-esteem.</p>
+            <li>
+              Explain how support from peers, families, and schools can improve a person's experience as it relates to sexual orientation and sexual identity?
+              <p>
+                Those who have good friends and family members who support them for who they are tend to feel much more comfortable with themselves and tend to be able to tell people in their lives
+                whom they are close to how they truly identify.
+              </p>
             </li>
           </ul>
 
-          <h3 id="assessment"><strong>Assessment</strong></h3>
+          <h3 id="assessment">Assessment</h3>
           <p>Complete one or more of the following assessment tasks for this lesson.</p>
           <ul>
-            <li><strong>Quiz:</strong> Have students take the Dating Relationships Quiz.
+            <li>
+              <strong>Quiz:</strong>
+              Have students take the Teens and Identity Exploration Quiz.
             </li>
-            <li><strong>Vocabulary Review:</strong> Collect the <a href="Farrar2E_Dating Relationships_VRW.docx" target="_blank">Dating Relationships Vocabulary Review Worksheets</a> and evaluate them for accuracy.
+            <li>
+              <strong>Vocabulary Review:</strong>
+              Collect the
+              <a href="Farrar2E_Teens and Identity Exploration_VRW.docx" target="_blank">Teens and Identity Exploration Vocabulary Review Worksheets</a>
+              and evaluate them for accuracy.
             </li>
-            <li><strong>Note-Taking Guide:</strong> Collect the completed <a href="Farrar2E_Dating Relationships_NTG.docx" target="_blank">Dating Relationships Note-Taking Guide</a> and spot-check one or more items for completion and accuracy.
+            <li>
+              <strong>Note-Taking Guide:</strong>
+              Collect the completed
+              <a href="Farrar2E_Teens and Identity Exploration_NTG.docx" target="_blank">Teens and Identity Exploration Note-Taking Guide</a>
+              and spot-check one or more items for completion and accuracy.
             </li>
-            <li><strong>Skill-Building Challenge Worksheet:</strong> Have students submit the <a href="Farrar2E_Dating Relationships_SBW.docx" target="_blank">Skill-Building Challenge Worksheet</a> and use the  Interpersonal Communication Holistic Rubric to evaluate their skill development.
+            <li>
+              <strong>Skill-Building Challenge Worksheet:</strong>
+              Have students submit the
+              <a href="Farrar2E_Teens and Identity Exploration_SBW.docx" target="_blank">Skill-Building Challenge Worksheet</a>
+              and use the Analyzing Influences Holistic Rubric to evaluate their skill development.
             </li>
-            <li><strong>Journal Question:</strong> Ask students to respond to the journal question again, adding information they learned from today’s class. Require a one-paragraph response that uses proper grammar.
+            <li>
+              <strong>Journal Question:</strong>
+              Ask students to respond to the journal question again, adding information they learned from today's class. Require a one-paragraph response that uses proper grammar.
             </li>
           </ul>
 
-          <h3 id="take-it-home"><strong>Take It Home</strong></h3>
-          <p>Talk to a family member or trusted adult about expectations of dating. Are your expectations about dating and what rules apply to dating the same as those of your family member or trusted adult? Write a paragraph explaining your response.</p>
+          <h3 id="take-it-home">Take It Home</h3>
+          <p>Ask a trusted adult if they have ever thought about their gender identity or if they know anyone who has. What questions have they asked either themselves or others about gender identity?</p>
         </section>
       </main>
     </div>
   </body>
 </html>
+
